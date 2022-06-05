@@ -1,4 +1,4 @@
-## simple ORM (Object Relational Mapper) Framework
+## Simple ORM (Object Relational Mapper) Framework
 
 ### Version
 0.1.0
