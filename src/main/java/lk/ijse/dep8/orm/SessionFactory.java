@@ -65,12 +65,14 @@ public class SessionFactory {
 
             /*Create a String builder*/
             StringBuilder sb = new StringBuilder();
-            sb.append("CREATE TABLE IF NOT EXIST ").append("( ");
+            sb.append("CREATE TABLE IF NOT EXISTS ")
+                    .append(tableName)
+                    .append(" (");
             for (String column:columns) {
-                sb.append(column).append(" VARCHAR(250) ");
+                sb.append(column).append(" VARCHAR(255), ");
             }
 
-            sb.append(primaryKey).append(" VARCHAR(255) PRIMARY KEY);");
+            sb.append(primaryKey).append(" VARCHAR(255) PRIMARY KEY)");
 
             System.out.println(sb);
             Statement stm = null;
